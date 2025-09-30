@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     const signInButton = document.getElementById('signInBtn');
     
     if (signInButton) {
         signInButton.addEventListener('click', (e) => {
             e.preventDefault(); 
-            
             signInButton.textContent = 'Cargando...';
             signInButton.disabled = true;
 
@@ -17,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
     const arrows = document.querySelectorAll('.carousel-arrow');
     arrows.forEach(arrow => {
         arrow.addEventListener('click', () => {
@@ -25,14 +22,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
-    const memberCards = document.querySelectorAll('.member-card');
-    memberCards.forEach(card => {
-        card.addEventListener('mouseover', () => {
-            console.log('El mouse está sobre un miembro del equipo. Se activa el efecto CSS.');
+    const addToCartBtn = document.getElementById('addToCartBtn');
+    
+    if (addToCartBtn) {
+        addToCartBtn.addEventListener('click', () => {
+            alert('¡Producto añadido al carrito! (Simulación)');
         });
-        card.addEventListener('click', () => {
-            alert('¡Tarjeta de equipo pulsada! Aquí podrías mostrar un modal con más información.');
+    }
+
+    const storageButtons = document.querySelectorAll('.storage-options .option-btn');
+    storageButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            storageButtons.forEach(btn => btn.classList.remove('active-option'));
+            e.target.classList.add('active-option');
+            console.log(`Opción de Almacenamiento seleccionada: ${e.target.textContent}`);
+        });
+    });
+
+    const colorCircles = document.querySelectorAll('.color-circle');
+    colorCircles.forEach(circle => {
+        circle.addEventListener('click', (e) => {
+            colorCircles.forEach(c => c.classList.remove('selected-color'));
+            e.target.classList.add('selected-color');
+            console.log(`Color seleccionado: ${e.target.style.backgroundColor}`);
         });
     });
 });

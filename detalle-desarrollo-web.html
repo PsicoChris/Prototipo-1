@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle | Desarrollo Web</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="index.html" class="logo-circle">Logo</a>
+        </div>
+        <nav class="navbar">
+            <a href="index.html" class="nav-button">HOME</a>
+            <a href="servicios.html" class="nav-button active">Servicios</a>
+            <a href="nuestro-equipo.html" class="nav-button">Nuestro equipo</a>
+            <a href="login.html" id="loginBtn" class="nav-button login-button">Login</a>
+        </nav>
+    </header>
+
+    <main class="main-content detail-content">
+        <section class="product-detail">
+            <h1 class="service-title">Desarrollo de Páginas Web</h1>
+            
+            <div class="product-box">
+                <div class="image-area">
+                    <img src="img/prod1.jpg" alt="Diseño de página web responsive" class="detail-main-img">
+                    <div class="thumbnails">
+                        <img src="img/prod1.jpg" alt="Miniatura 1" class="thumbnail-img">
+                        <img src="img/prod1.jpg" alt="Miniatura 2" class="thumbnail-img">
+                        <img src="img/prod1.jpg" alt="Miniatura 3" class="thumbnail-img">
+                    </div>
+                </div>
+
+                <div class="info-area">
+                    <h2>Paquete Web para Negocios - Landing Page</h2>
+                    <p class="price">$800.000</p>
+                    
+                    <p class="description">
+                        Creación de una página web profesional de una sola página (Landing Page) optimizada para móviles y con llamado a la acción. Ideal para promocionar tu negocio o servicio. Incluye 1 año de hosting básico.
+                    </p>
+                    
+                    <div class="customization-group">
+                        <h3>Nivel de Diseño</h3>
+                        <div class="color-options">
+                            <span class="color-circle selected-color" style="background-color: #587C58;">✓</span> 
+                            <span class="color-circle" style="background-color: #3B5B80;"></span>
+                            <span class="color-circle" style="background-color: #7B3E3E;"></span>
+                        </div>
+                    </div>
+
+                    <div class="customization-group">
+                        <h3>Páginas Adicionales (Opcional)</h3>
+                        <div class="storage-options">
+                            <button class="option-btn active-option">Ninguna</button>
+                            <button class="option-btn">Blog</button>
+                            <button class="option-btn">Galería</button>
+                            <button class="option-btn">E-commerce</button>
+                        </div>
+                    </div>
+                    
+                    <div class="purchase-actions">
+                        <div class="quantity-control">
+                            <button class="qty-btn">-</button>
+                            <input type="text" value="1" readonly class="qty-input">
+                            <button class="qty-btn">+</button>
+                        </div>
+                        <button id="addToCartBtn" class="nav-button cart-button">Solicitar Cotización</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="social-icons">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Google Maps"><i class="fas fa-map-marker-alt"></i></a>
+        </div>
+        <p class="copyright">Copyright 2025. Diseñado por Chris</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

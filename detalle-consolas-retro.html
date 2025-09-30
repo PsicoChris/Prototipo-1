@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle | Servidores Domésticos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="index.html" class="logo-circle">Logo</a>
+        </div>
+        <nav class="navbar">
+            <a href="index.html" class="nav-button">HOME</a>
+            <a href="servicios.html" class="nav-button active">Servicios</a>
+            <a href="nuestro-equipo.html" class="nav-button">Nuestro equipo</a>
+            <a href="login.html" id="loginBtn" class="nav-button login-button">Login</a>
+        </nav>
+    </header>
+
+    <main class="main-content detail-content">
+        <section class="product-detail">
+            <h1 class="service-title">Soluciones de Almacenamiento</h1>
+            
+            <div class="product-box">
+                <div class="image-area">
+                    <img src="img/prod1.jpg" alt="Servidor NAS para el hogar" class="detail-main-img">
+                    <div class="thumbnails">
+                        <img src="img/prod1.jpg" alt="Miniatura 1" class="thumbnail-img">
+                        <img src="img/prod1.jpg" alt="Miniatura 2" class="thumbnail-img">
+                        <img src="img/prod1.jpg" alt="Miniatura 3" class="thumbnail-img">
+                    </div>
+                </div>
+
+                <div class="info-area">
+                    <h2>Servidor de Almacenamiento Doméstico (NAS)</h2>
+                    <p class="price">$1'500.000 (Base)</p>
+                    
+                    <p class="description">
+                        Configuración personalizada de un servidor de red (NAS) para copias de seguridad automáticas, streaming de medios (Plex) y nube personal. Precio base sin discos duros incluidos.
+                    </p>
+                    
+                    <div class="customization-group">
+                        <h3>Tipo de Chasis</h3>
+                        <div class="color-options">
+                            <span class="color-circle selected-color" style="background-color: #3C3C3C; border-color: #EEE;">✓</span> 
+                            <span class="color-circle" style="background-color: #666666;"></span>
+                            <span class="color-circle" style="background-color: #1A1A1A;"></span>
+                        </div>
+                    </div>
+
+                    <div class="customization-group">
+                        <h3>Capacidad de Discos Duros (RAID 1)</h3>
+                        <div class="storage-options">
+                            <button class="option-btn">4TB</button>
+                            <button class="option-btn active-option">8TB</button>
+                            <button class="option-btn">16TB</button>
+                            <button class="option-btn">32TB</button>
+                        </div>
+                    </div>
+                    
+                    <div class="purchase-actions">
+                        <div class="quantity-control">
+                            <button class="qty-btn">-</button>
+                            <input type="text" value="1" readonly class="qty-input">
+                            <button class="qty-btn">+</button>
+                        </div>
+                        <button id="addToCartBtn" class="nav-button cart-button">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="social-icons">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Google Maps"><i class="fas fa-map-marker-alt"></i></a>
+        </div>
+        <p class="copyright">Copyright 2025. Diseñado por Chris</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
