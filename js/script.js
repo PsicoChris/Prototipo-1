@@ -1,41 +1,76 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const signInButton = document.getElementById('signInBtn');
     
+    const loadServices = async () => {
+        const container = document.getElementById('service-cards-container');
+
+        if (!container) return; 
+
+        try {
+
+            const response = await fetch('data.json');
+            if (!response.ok) {
+
+                throw new Error('Error al cargar data.json: ' + response.statusText);
+            }
+            const services = await response.json();
+
+
+            services.forEach(service => {
+                const cardHtml = `
+                    <div class="service-card" data-service-id="${service.id}">
+                        <img src="${service.imagen_placeholder}" alt="${service.nombre}" class="card-img">
+                        <h3>${service.nombre}</h3>
+                        <p>${service.descripcion_corta}</p>
+                        <a href="${service.url_detalle}" class="nav-button">Ver Detalles</a>
+                    </div>
+                `;
+
+                container.innerHTML += cardHtml;
+            });
+
+        } catch (error) {
+            console.error('Fallo al cargar los servicios:', error);
+            if (container) {
+
+                container.innerHTML = '<p style="color: red;">Error: No se pudieron cargar los datos de los servicios. (Verifica que usas un Live Server para evitar problemas de CORS)</p>';
+            }
+        }
+    };
+ 
+    loadServices();
+
+
+    const signInButton = document.getElementById('signInBtn');
+
     if (signInButton) {
         signInButton.addEventListener('click', (e) => {
             e.preventDefault(); 
-            signInButton.textContent = 'Cargando...';
+            
+
+            signInButton.textContent = 'Verificando...';
             signInButton.disabled = true;
 
             setTimeout(() => {
-                alert('Simulación de inicio de sesión completada: ¡Proceso de autenticación exitoso (visual)!');
-                signInButton.textContent = 'Sign in';
-                signInButton.disabled = false;
+
+                window.location.href = 'admin-panel.html';
             }, 1500);
         });
     }
-
-    const arrows = document.querySelectorAll('.carousel-arrow');
-    arrows.forEach(arrow => {
-        arrow.addEventListener('click', () => {
-            console.log('Flecha de carrusel pulsada. (Funcionalidad de desplazamiento pendiente)');
-        });
-    });
 
     const addToCartBtn = document.getElementById('addToCartBtn');
     
     if (addToCartBtn) {
         addToCartBtn.addEventListener('click', () => {
-            alert('¡Producto añadido al carrito! (Simulación)');
+            alert('¡Acción de carrito/cotización disparada! (Simulación)');
         });
     }
+
 
     const storageButtons = document.querySelectorAll('.storage-options .option-btn');
     storageButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             storageButtons.forEach(btn => btn.classList.remove('active-option'));
             e.target.classList.add('active-option');
-            console.log(`Opción de Almacenamiento seleccionada: ${e.target.textContent}`);
         });
     });
 
@@ -44,7 +79,14 @@ document.addEventListener('DOMContentLoaded', () => {
         circle.addEventListener('click', (e) => {
             colorCircles.forEach(c => c.classList.remove('selected-color'));
             e.target.classList.add('selected-color');
-            console.log(`Color seleccionado: ${e.target.style.backgroundColor}`);
+        });
+    });
+    
+
+    const arrows = document.querySelectorAll('.carousel-arrow');
+    arrows.forEach(arrow => {
+        arrow.addEventListener('click', () => {
+            console.log('Flecha de carrusel pulsada. (Funcionalidad de desplazamiento pendiente)');
         });
     });
 });

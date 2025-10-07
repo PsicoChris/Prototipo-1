@@ -1,0 +1,34 @@
+[
+    {
+        "id": "ensambles",
+        "nombre": "Ensambles de PCs",
+        "descripcion_corta": "Armado de equipos corporativos y personales de alto rendimiento. Totalmente personalizable.",
+        "precio_base": "12'000.000",
+        "url_detalle": "detalle-servicio.html",
+        "imagen_placeholder": "img/arqui.jpg"
+    },
+    {
+        "id": "consolas",
+        "nombre": "Consolas Retro Mini",
+        "descripcion_corta": "Diseño y venta de consolas compactas con emulación de juegos clásicos.",
+        "precio_base": "500.000",
+        "url_detalle": "detalle-consolas-retro.html",
+        "imagen_placeholder": "img/retro.jpg"
+    },
+    {
+        "id": "servidores",
+        "nombre": "Servidores para el Hogar",
+        "descripcion_corta": "Configuración de servidores domésticos para almacenamiento, backups y automatización.",
+        "precio_base": "1'500.000 (Base)",
+        "url_detalle": "detalle-servidores-hogar.html",
+        "imagen_placeholder": "img/server1.jpg"
+    },
+    {
+        "id": "desarrollo",
+        "nombre": "Desarrollo Web",
+        "descripcion_corta": "Creación de páginas web profesionales para negocios y emprendimientos.",
+        "precio_base": "800.000",
+        "url_detalle": "detalle-desarrollo-web.html",
+        "imagen_placeholder": "img/desarrollo.jpg"
+    }
+]
